@@ -137,6 +137,7 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 10px;
     transition: all 0.3s ease-in-out;
+    filter: brightness(105%);
   }
 
   .imageSection:hover {
