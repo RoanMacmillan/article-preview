@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* makes sizing simpler */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  color: black;
+  font-size: 13px;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+  color-scheme: dark light;
+}
+
+/* min body height */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210, 46%, 95%);
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 1.231rem;
+  line-height: 1.846rem;
+  letter-spacing: 0.2px;
+  color: #48556a;
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.121875px;
+  color: #48556a;
+}
+
+span {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.121875px;
+  color: #9daec2;
+}
+
+p {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.538rem;
+  letter-spacing: 0.121875px;
+  color: #6e8098;
+  margin-top: 12px;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    color: #48556a;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.121875px;
+    color: #6e8098;
+  }
+}

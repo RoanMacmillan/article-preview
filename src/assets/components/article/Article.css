@@ -1,0 +1,221 @@
+.articleContainer {
+  width: 25.154rem;
+  height: 512px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.imageSection {
+  height: 200px;
+  background-image: url("../../images/drawers.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: -17px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.textSection {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 36px;
+}
+
+.bottomSection {
+  height: 4.923rem;
+  margin-top: 29px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 0px 32px 0px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.activeSection {
+  position: absolute;
+  bottom: 0;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #48556a;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  opacity: 0;
+  left: 0;
+  height: 64px;
+  /* overflow: hidden; */
+  transition: all 0.2s ease-in-out;
+}
+
+.activeSection.active {
+  opacity: 1;
+}
+
+.activeSection span {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 5px;
+  color: #9daec2;
+  margin-right: 21px;
+  text-transform: uppercase;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  width: 92px;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url("../../images/avatar-michelle.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bottomChild,
+.avatar {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.icon-container {
+  margin-left: auto;
+  background: #ecf2f8;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 9px 0px 10px 9px;
+}
+
+.bottomSection .icon-container {
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.bottomWrapper {
+  height: 312px;
+  margin-top: 0;
+}
+
+.arrowIcon.active {
+  filter: brightness(0) invert(1);
+}
+
+.icon-container.active {
+  background: #6e8098;
+}
+@media screen and (min-width: 900px) {
+  .articleContainer {
+    flex-direction: row;
+    width: 730px;
+    height: 280px;
+  }
+
+  .bottomWrapper {
+    width: 445px;
+    height: 280px;
+  }
+
+  .imageSection {
+    width: 285px;
+    max-width: 285px;
+    height: 280px;
+    background-size: cover;
+    background-position-y: bottom;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .imageSection:hover {
+    transform: scale(1.1);
+  }
+
+  .imgWrapper {
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .textSection {
+    padding-top: 32px;
+  }
+
+  .bottomSection {
+    height: unset;
+    margin-top: 20px;
+    align-items: flex-start;
+  }
+
+  .avatar,
+  .bottomChild,
+  button:first-of-type {
+    margin-top: 0 !important;
+  }
+
+  button:first-of-type {
+    margin-top: 4px !important;
+  }
+
+  .bottomSection,
+  .textSection {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .activeSection {
+    width: 248px;
+    height: 55px;
+    z-index: 100;
+    left: unset;
+    bottom: 96px;
+    right: -68px;
+    border-radius: 10px;
+    padding-left: 37px;
+    padding-right: 36px;
+    box-shadow: 0px 10px 10px rgba(201, 213, 225, 0.503415);
+  }
+
+  .icon-container {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .icon-container.active {
+    display: none;
+  }
+
+  .icon-container.iconChange {
+    background: #6e8098;
+  }
+
+  .icon-container.iconChange .arrowIcon {
+    filter: brightness(0) invert(1);
+  }
+
+  .triangle {
+    transition: all 0.2s ease-in-out;
+
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    opacity: 1;
+    border-top: 13px solid #48556a;
+    position: absolute;
+    z-index: 1000000;
+    bottom: -12px;
+    left: 45.7%;
+  }
+}
